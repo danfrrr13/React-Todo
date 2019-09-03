@@ -36,10 +36,10 @@ class App extends React.Component {
     return todo;
   }
 
-  changeHandler = e => {
-    this.setState({input: e.target.value})
-    console.log('input: ', this.state.input)
-  }
+  // changeHandler = e => {
+  //   this.setState({input: e.target.value})
+  //   console.log('input: ', this.state.input)
+  // }
 
   addTodo = async todo => {
     console.log('todo being added/task passed in: ', todo)
@@ -47,10 +47,10 @@ class App extends React.Component {
     console.log('todos: ', this.state.todos)
   }
 
-  submitTodo = async e => {
+  submitTodo = async (e, todo) => {
     e.preventDefault();
     const task = this.newTodo({
-      task: this.state.input,
+      task: todo,
     })
     console.log('returned task: ', task)
     await this.setState({new: task})
