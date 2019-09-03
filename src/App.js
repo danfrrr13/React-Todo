@@ -22,7 +22,7 @@ class App extends React.Component {
         }
       ],
       new: {},
-      input: ''
+      // input: ''
     }
   }
 
