@@ -79,7 +79,7 @@ class App extends React.Component {
       <div>
         <h1>Todo List...</h1>
         <TodoList todos={this.state.todos} completed={this.changeCompleted} />
-        <TodoForm changeHandler={this.changeHandler} submit={this.submitTodo} filter={this.filterCompleted} add={this.addTodo} input={this.state.input} />
+        <TodoForm submit={this.submitTodo} filter={this.filterCompleted} add={this.addTodo} />
       </div>
     );
   }
